@@ -1,0 +1,32 @@
+# autheg/docker-compose.yml
+
+version: '3' # dockerfile 版本 
+services:
+  db: # 對應 rails database.yml 的 host
+    image: postgres
+    ports:
+      - "5432"
+  backend: # 會變成 REPOSITORY name autheg_backend
+    build:
+      context: autheg-backend # 要 build 的資料夾位置
+      args:
+        UID: ${UID:-1001}
+    volumes:
+      - ./autheg-backend:/usr/src/app
+      # 放哪裡沒有一定 /var/www/html,  /usr/src/app,  /home 都有人放
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+    user: rails # 對應到 adduser 的名稱
+  frontend: # 會變成 REPOSITORY name autheg_frontend
+    build:
+      context: autheg-frontend
+      args:
+        UID: ${UID:-1001}
+    volumes:
+      - ./autheg-frontend:/usr/src/app
+    ports:
+      - "3000:3000"
+    user: frontend # 對應到 adduser 的名稱
+

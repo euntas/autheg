@@ -1,0 +1,2 @@
+# autheg/autheg-frontend/.dockerignore
+/node_modules/

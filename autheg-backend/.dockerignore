@@ -1,0 +1,4 @@
+# autheg/autheg-backend/.dockerignore
+/vendor/bundle
+/log
+/tmp
