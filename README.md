@@ -16,4 +16,7 @@ nuxt.config.js 파일은 위의 설명 사이트대로 하면 에러... 설명 �
 
 ## 실행예
 
+<img width="1438" alt="2018-10-08 22 32 42" src="https://user-images.githubusercontent.com/5255598/46612093-92759d00-cb4a-11e8-8d26-4b0bb1148cbf.png">
+
+<img width="1437" alt="2018-10-08 22 32 30" src="https://user-images.githubusercontent.com/5255598/46612082-8a1d6200-cb4a-11e8-9771-2737397be4cd.png">
 
